@@ -10,5 +10,8 @@
 <body class="bg-kopi" data-bs-theme="dark">
     <x-nav/>
 
+    <h1 class="text-center text-white mt-5">Community Page</h1>
+
+    <x-footer/>
 </body>
 </html>

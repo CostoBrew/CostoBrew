@@ -2,6 +2,12 @@
 @import 'https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap';
 @import 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css';
 
+@font-face {
+  font-family: 'Apple Garamond';
+  font-style: normal;
+  src: url('../../public/fonts/AppleGaramond-Bold.ttf') format('ttf');
+}
+
 *{
   font-family: "Readex Pro", sans-serif;
   font-optical-sizing: auto;
@@ -15,6 +21,7 @@
     background-image: url('/public/bg.svg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 .navi-bg{
     background-color: rgba(0, 0, 0, 0.171);
@@ -26,4 +33,137 @@
 }
 button{
   border: none;
+}
+.btn-softblue{
+    background-color: #232341;
+}
+.font-garamond{
+    font-family: 'Apple Garamond', serif;
+}
+.size-1{
+    font-size: 50px;
+
+    @media (max-width: 768px) {
+        font-size: 35px;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 30px;
+    }
+}
+.size-2{
+    font-size: 70px;
+
+    @media (max-width: 768px) {
+        font-size: 50px;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 40px;
+    }
+}
+.aboutbg{
+    background-image: url('/public/CostoBrew_About.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.mainbg{
+    background-image: url('/public/CostoBrew-Contact.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.form-bg{
+    background-color: #EBE6CB;
+    border-style: none;
+    border-radius: 20px 20px 20px 0px;
+
+    .form-control {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.3);
+        color: #333;
+
+        &:focus {
+            background-color: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1);
+            color: #333;
+        }
+    }
+
+    .form-floating > label {
+        color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+.btn-custom-brown {
+    background-color: transparent;
+    border-color: #381B1B;
+    color: #381B1B;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    border-width: 2px;
+
+    &:hover {
+        background-color: #381B1B;
+        border-color: #381B1B;
+        color: white;
+    }
+
+    &:focus {
+        background-color: #381B1B;
+        border-color: #381B1B;
+        color: white;
+        box-shadow: 0 0 0 0.25rem rgba(56, 27, 27, 0.25);
+    }
+}
+.footer-text{
+    color: #888888;
+}
+
+// Responsive navbar fixes
+.navbar {
+    .container-fluid {
+        @media (max-width: 992px) {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        @media (max-width: 576px) {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+    }
+
+    .navbar-brand img {
+        @media (max-width: 576px) {
+            max-width: 120px;
+        }
+    }
+
+    .navbar-nav {
+        @media (max-width: 991px) {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    // Desktop cart and user buttons - hidden on mobile
+    .navbar-actions {
+        @media (max-width: 991px) {
+            display: none !important;
+        }
+    }
+
+    // Mobile cart and user buttons - hidden on desktop
+    .navbar-actions-mobile {
+        display: none;
+
+        @media (max-width: 991px) {
+            display: block;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    }
 }
